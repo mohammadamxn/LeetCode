@@ -1,0 +1,7 @@
+class Solution:
+    def interpret(self, command: str) -> str:
+        d = {'G': 'G', '()': 'o', '(al)': 'al'}
+        for v in d:
+            if v in command:
+                command = command.replace(v, d[v])
+        return command
