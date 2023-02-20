@@ -1,0 +1,11 @@
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
+        lst1 = nums[:n]
+        lst2 = nums[n:]
+        new = []
+        i = 0
+        while i < len(lst1):
+            new.append(lst1[i])
+            new.append(lst2[i])
+            i += 1
+        return new
