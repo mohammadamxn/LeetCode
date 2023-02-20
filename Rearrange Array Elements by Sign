@@ -1,0 +1,14 @@
+class Solution:
+    def pivotArray(self, nums: List[int], pivot: int) -> List[int]:
+        left = []
+        right = []
+        centre = []
+
+        for n in nums:
+            if n < pivot:
+                left.append(n)
+            elif n > pivot:
+                right.append(n)
+            else:
+                centre.append(pivot)
+        return left + centre + right
